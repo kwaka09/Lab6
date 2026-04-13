@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPalace - Everything Your Best Friend Needs</title>
+    <style>
+        :root {
+            --primary-color: #FFA500; /* Orange */
+            --secondary-color: #3B7373; /* Teal */
+            --background-color: #F8F8F8;
+            --text-color: #333;
+            --light-text-color: #666;
+            --font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 50px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            font-size: 1em;
+            outline: none;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero-cta {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .category-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .category-card {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .category-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .category-card p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .product-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .product-card {
+            min-width: 250px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .promotions {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PetPalace</div>
+        <div class="search-bar">
+            <input type="text" placeholder="What are you looking for?">
+        </div>
+        <div class="nav-links">
+            <a href="#">Account</a>
+            <a href="#">Cart</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Everything Your Best Friend Needs</h1>
+            <p>High-quality pet supplies delivered to your door.</p>
+            <a href="#" class="hero-cta">Shop All Categories</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h2>Shop by Pet</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="dogs.jpg" alt="Dogs">
+                    <p>Dogs</p>
+                </div>
+                <div class="category-card">
+                    <img src="cats.jpg" alt="Cats">
+                    <p>Cats</p>
+                </div>
+                <div class="category-card">
+                    <img src="fish" alt="Fish & Small Animals">
+                    <p>Fish & Small Animals</p>
+                </div>
+                <div class="category-card">
+                    <img src="birds.jpg" alt="Birds">
+                    <p>Birds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="background-color: #F0F0F0;">
+        <div class="container">
+            <h2>Bestsellers</h2>
+            <div class="product-carousel">
+                <div class="product-card">
+                    <img src="DogFood.jpg" alt="Product">
+                    <h3>Premium Dog Food</h3>
+                    <p> ₱145.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="catscratcher.jpg" alt="Product">
+                    <h3>Modern Cat Scratcher</h3>
+                    <p> ₱329.50</p>
+                </div>
+                <div class="product-card">
+                    <img src="fishtank.jpg" alt="Product">
+                    <h3>20-Gallon Fish Tank</h3>
+                    <p> ₱1,200.00</p>
+                </div>
+                <div class="product-card">
+                    <img src="birdtoy.jpg" alt="Product">
+                    <h3>Colorful Bird Toy</h3>
+                    <p> ₱49.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="promotions">
+        <div>
+            <h3>Save up to 30% on Pet Beds!</h3>
+            <p>Shop our comfortable and cozy selection now.</p>
+        </div>
+        <div>
+            <p>Terms and conditions apply.</p>
+        </div>
+    </div>
+
+</body>
+</html>
